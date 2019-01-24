@@ -2,7 +2,7 @@
   "name": "tollsys-app",
   "version": "0.0.4",
   "author": "GYF <540488779@qq.com>",
-  "description": "结账系统改造",
+  "description": "后台管理工具桌面版",
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
