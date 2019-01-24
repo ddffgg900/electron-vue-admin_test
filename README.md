@@ -1,6 +1,6 @@
 # tollsys-app
 
-> 结账系统改造
+> 后台管理工具桌面版
 
 #### Build Setup
 
