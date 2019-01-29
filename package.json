@@ -15,7 +15,7 @@
     "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix src",
     "pack": "npm run pack:main && npm run pack:renderer",
     "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
-    "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
+    "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js --mode production",
     "postinstall": "npm run lint:fix"
   },
   "build": {
@@ -98,7 +98,7 @@
     "css-loader": "^0.28.11",
     "del": "^3.0.0",
     "devtron": "^1.4.0",
-    "electron": "^3.1.1",
+    "electron": "^3.1.2",
     "electron-builder": "^20.35.0",
     "electron-debug": "^1.5.0",
     "electron-devtools-installer": "^2.2.4",

@@ -1,10 +1,11 @@
 import Mock from 'mockjs'
 
-const url = process.env.BASE_API
+// const url = process.env.BASE_API
 
 const login = () => {
   const data = {}
   data.status = true
+  data.token = '888888888888'
   return {
     data: data
   }
@@ -19,5 +20,5 @@ const getInfo = () => {
   }
 }
 
-Mock.mock(`${url}/user/login`, 'post', login)
-Mock.mock(`${url}/user/info`, 'get', getInfo)
+Mock.mock(`/api/user/login`, 'post', login)
+Mock.mock(`/api/user/info`, 'get', getInfo)

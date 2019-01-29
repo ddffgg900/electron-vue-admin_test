@@ -71,14 +71,15 @@ export default {
       }
     },
     handleLogin () {
-      this.$refs.loginForm.validate(valid => {
+      const that = this
+      that.$refs.loginForm.validate(valid => {
         if (valid) {
-          this.loading = true
-          this.$store.dispatch('Login', this.loginForm).then(() => {
-            this.loading = false
-            this.$router.push({ path: '/' })
+          that.loading = true
+          that.$store.dispatch('Login', that.loginForm).then(() => {
+            that.loading = false
+            that.$router.push({ path: '/' })
           }).catch(() => {
-            this.loading = false
+            that.loading = false
           })
         } else {
           console.log('error submit!!')

@@ -27,9 +27,7 @@ function createWindow () {
     fullscreen: false,
     frame: true,
     resizable: true,
-    maximizable: true,
-    width: '100%',
-    height: '100%'
+    maximizable: true
   })
 
   const menu = Menu.buildFromTemplate(template)
@@ -38,8 +36,8 @@ function createWindow () {
   /* if (process.env.NODE_ENV === 'development') { // vue-devtools
     BrowserWindow.addDevToolsExtension('C:/Users/www/AppData/Local/Google/Chrome/User Data/Default/Extensions/nhdogjmejiglipccpnnnanhbledajbpd/4.1.5_0')
   } */
+  mainWindow.maximize()
   mainWindow.loadURL(winURL)
-
   mainWindow.on('closed', () => {
     mainWindow = null
   })
